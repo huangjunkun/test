@@ -1,4 +1,4 @@
-
+ï»¿
 
 //using namespace test_xl_items;
 
@@ -56,12 +56,12 @@ random_list_node* test_construct_list(unsigned list_size = 7)
     }
     return head_ptr;
 }
-///Í¼¡¾1¡¿ÊÇĞèÒª¸´ÖÆµÄÁ´±í
-///Í¼¡¾2¡¿
-///ÈçÍ¼¡¾2¡¿ËùÊ¾£¬ABCDÊÇÔ­À´µÄÁ´±í£¬A¡¯B¡¯C¡¯D¡¯ÊÇ¸´ÖÆµÄÁ´±í£¬µÚÒ»±éÉ¨ÃèË³Ğò¸´ÖÆnextÖ¸Õë£¬
-///°ÑABCDµÄnext·Ö±ğÖ¸ÏòA¡¯B¡¯C¡¯D¡¯£¬½«A¡¯µÄnextÖ¸ÕëÖ¸ÏòB£¬B¡¯µÄnextÖ¸ÕëÖ¸ÏòC£¬ÒÀ´ÎÀàÍÆ
-///¸´ÖÆrandomÖ¸Õë£º A¡¯->random=A->random->next
-///»Ö¸´:A->next=A¡¯->next;A¡¯->next=A¡¯->next->next;
+///å›¾ã€1ã€‘æ˜¯éœ€è¦å¤åˆ¶çš„é“¾è¡¨
+///å›¾ã€2ã€‘
+///å¦‚å›¾ã€2ã€‘æ‰€ç¤ºï¼ŒABCDæ˜¯åŸæ¥çš„é“¾è¡¨ï¼ŒAâ€™Bâ€™Câ€™Dâ€™æ˜¯å¤åˆ¶çš„é“¾è¡¨ï¼Œç¬¬ä¸€éæ‰«æé¡ºåºå¤åˆ¶nextæŒ‡é’ˆï¼Œ
+///æŠŠABCDçš„nextåˆ†åˆ«æŒ‡å‘Aâ€™Bâ€™Câ€™Dâ€™ï¼Œå°†Aâ€™çš„nextæŒ‡é’ˆæŒ‡å‘Bï¼ŒBâ€™çš„nextæŒ‡é’ˆæŒ‡å‘Cï¼Œä¾æ¬¡ç±»æ¨
+///å¤åˆ¶randomæŒ‡é’ˆï¼š Aâ€™->random=A->random->next
+///æ¢å¤:A->next=Aâ€™->next;Aâ€™->next=Aâ€™->next->next;
 random_list_node* copy_random_list(random_list_node* head_ptr)
 {
     if (NULL == head_ptr) return NULL;
@@ -258,7 +258,7 @@ int main()
 
     unsigned args = 5;
  	const unsigned THREAM_SUM = 5;
-	/// test 0 ... ¡¾¹ÊÒâµÄ¡¿complie error ...
+	/// test 0 ... ã€æ•…æ„çš„ã€‘complie error ...
 // 	thread_base *pThread0 = new thread_base(NULL);
 // 	delete pThread0;
 	/// test 1 ...
@@ -281,8 +281,8 @@ int main()
 //        std::cout << " The time-out interval 10s elapsed, and the object's state is nonsignaled.\n";
 
 	/// test 4 ...
-	/// ¡¾×¢¡¿test_thread, test_thread2 Ïß³ÌÀà²»ÊÊÒË½áºÏÓĞ¹¹Ôì²ÎÊıµÄstd::vectorÊ¹ÓÃ£¬
-	///  ¿ÉÄÜÒòÎªstd::vector¹¹Ôìº¯ÊıÄÚ²¿µÄ¸´ÖÆ¹¹Ôì¹ı³Ìµ¼ÖÂ¾ä±ú[HANDLE]Ê§Ğ§£¬ÏêÏ¸Ô­Òò¿É½ø²½Éî¾¿£¡
+	/// ã€æ³¨ã€‘test_thread, test_thread2 çº¿ç¨‹ç±»ä¸é€‚å®œç»“åˆæœ‰æ„é€ å‚æ•°çš„std::vectorä½¿ç”¨ï¼Œ
+	///  å¯èƒ½å› ä¸ºstd::vectoræ„é€ å‡½æ•°å†…éƒ¨çš„å¤åˆ¶æ„é€ è¿‡ç¨‹å¯¼è‡´å¥æŸ„[HANDLE]å¤±æ•ˆï¼Œè¯¦ç»†åŸå› å¯è¿›æ­¥æ·±ç©¶ï¼
     std::vector<test_thread2> thread_vec(5, &args);///or test_thread
     std::cout << " " << thread_vec.size() << "\n";
     for (size_t i=0; i < thread_vec.size(); i++)
@@ -290,7 +290,7 @@ int main()
         ::WaitForSingleObject(thread_vec[i].handle(), INFINITE);// ?...
         std::cout << "WaitForSingleObject Pass.\n";
     }
-	/// test 5 ¡¾×¢¡¿¿ÉÄÜ´òÓ¡³öÏÖ´íÂÒ£¬ÊôÓÚIO(std::cout)ÖĞ¶Ï²Ù×÷µ¼ÖÂ¡£
+	/// test 5 ã€æ³¨ã€‘å¯èƒ½æ‰“å°å‡ºç°é”™ä¹±ï¼Œå±äºIO(std::cout)ä¸­æ–­æ“ä½œå¯¼è‡´ã€‚
 // 	test_thread threads[THREAM_SUM];
 // 	for (size_t i=0; i < THREAM_SUM; i++)
 // 		threads[i].resume();
